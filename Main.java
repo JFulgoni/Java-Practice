@@ -1,5 +1,6 @@
 package john_test;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Main {
 	
@@ -80,6 +81,13 @@ public class Main {
 		System.out.println(candidate);
 		if(main.validate(feed, candidate)){
 			System.out.println(candidate + " is a majority");
+		}
+		
+		RotateArray rotate = new RotateArray();
+		int[] result = rotate.rotate(new int[]{1, 2, 3, 4, 5, 6, 7}, 4);
+		System.out.println("\n Something's flukey with this");
+		for(int i = 0; i < result.length; i++){
+			System.out.print(result[i]);
 		}
 		
 		
