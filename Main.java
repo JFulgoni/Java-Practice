@@ -1,6 +1,8 @@
 package john_test;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Main {
 	
@@ -89,6 +91,27 @@ public class Main {
 		for(int i = 0; i < result.length; i++){
 			System.out.print(result[i]);
 		}
+		
+		//WordBreak
+		Set<String> dict = new HashSet<String>();
+		dict.add("leet");
+		dict.add("code");
+		dict.add("john");
+		String s = "leetcode";
+		WordBreak wb = new WordBreak();
+		boolean[] wba = wb.medium(s,  dict);
+		if(!wba[0]){
+			System.out.println("\n\nWord Break is false");
+		}
+		else{
+			int x = 1;
+			int n = wba.length;
+			while(!wba[x]){
+				++x;
+			}
+			System.out.println("\n\n" +s.substring(0, x) + " " + s.substring(x, n - 1));
+		}
+		//System.out.println("\n\nWordbreak:" + wb.medium(s,  dict));
 		
 		
 	}//end main
