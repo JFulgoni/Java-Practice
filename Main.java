@@ -125,6 +125,14 @@ public class Main {
 		ArrayList<String> res = wb.hard(s, dictionary);
 		System.out.println("\n" + res + "\n");
 		
+		//Single Number
+		int[] singleNumberList = {1, 4, 5, 6, 6, 5, 4};
+		SingleNumber sn = new SingleNumber();
+		System.out.println("\n The single number is " + sn.findSingle(singleNumberList));
+		
+		int[] singleNumListII = {4, 4, 5, 5, 5, 3, 6, 6, 6, 4};
+		System.out.println("\n The single number is " + sn.findSingleII(singleNumListII));
+		
 		
 	}//end main
 	
