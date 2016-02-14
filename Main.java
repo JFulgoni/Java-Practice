@@ -113,6 +113,18 @@ public class Main {
 		}
 		//System.out.println("\n\nWordbreak:" + wb.medium(s,  dict));
 		
+		//WordBreak Hard solution
+		Set<String> dictionary = new HashSet<String>();
+		dictionary.add("cat");
+		dictionary.add("cats");
+		dictionary.add("and");
+		dictionary.add("sand");
+		dictionary.add("dog");
+		dictionary.add("dogs");
+		s = "catsanddogs";
+		ArrayList<String> res = wb.hard(s, dictionary);
+		System.out.println("\n" + res + "\n");
+		
 		
 	}//end main
 	
