@@ -1,7 +1,7 @@
 package john_test;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class Main {
@@ -170,6 +170,16 @@ public class Main {
 		int[] balloons = new int[]{3, 1, 5, 8, 4};
 		System.out.println("\nBest Value: " + burst.play(balloons));
 		
+		
+		PalindromePartition ppart = new PalindromePartition();
+		s = "aabc";
+		List<List<String>> values = ppart.medium(s);
+		for(List<String> combination : values){
+			System.out.println(combination);
+		}
+		
+		s = "racecar";
+		System.out.println("\nIs it a palindrome?: " + ppart.isPalindrome(s));
 		
 		
 	}//end main
