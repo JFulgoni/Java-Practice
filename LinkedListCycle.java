@@ -55,5 +55,24 @@ public class LinkedListCycle {
 		}
 		return tortoise;
 	}
+	
+	// this code reverses a linked list from indexes m to n
+	public ListNodeX reverseLinkedList(ListNodeX head, int m, int n){
+		ListNodeX start = head;
+		//find the first start position
+		for(int i = 1; i < m; i++){
+			start = start.next;
+		}
+		ListNodeX temp;
+		ListNodeX end = start;
+		ListNodeX current = start.next;
+		for(int i = m; i < n; i++){
+			temp = current.next;
+			current.next = temp.next;
+			temp.next = start.next;
+			start.next = temp;
+		}
+		return head;
+	}
 
 }
