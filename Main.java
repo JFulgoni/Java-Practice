@@ -6,6 +6,39 @@ import java.util.Set;
 
 public class Main {
 	
+	public int getCandidate(int[] array){
+		int majority = 0;
+		int count = 0;
+		for(int n : array){
+			if(count == 0){
+				majority = n;
+			}
+			if(n == majority){
+				count++;
+			}
+			else{
+				count--;
+			}
+		}
+		return majority;
+	}
+	
+	public boolean validate(int[] array, int majority){
+		int count = 0;
+		for(int n : array){
+			if(n == majority){
+				count++;
+			}
+		}
+		System.out.println(count + " out of " + array.length);
+		if(count > array.length / 2){
+			return true;
+		}
+		else{
+			return false;
+		}		
+	}
+	
 	public static void main(String[] args) {
 		Animal animal = new Animal("Roofus");
 		Dog bowser = new Dog("Bowser");
@@ -133,40 +166,13 @@ public class Main {
 		int[] singleNumListII = {4, 4, 5, 5, 5, 3, 6, 6, 6, 4};
 		System.out.println("\n The single number is " + sn.findSingleII(singleNumListII));
 		
+		BurstBalloons burst = new BurstBalloons();
+		int[] balloons = new int[]{3, 1, 5, 8, 4};
+		System.out.println("\nBest Value: " + burst.play(balloons));
+		
+		
 		
 	}//end main
 	
-	public int getCandidate(int[] array){
-		int majority = 0;
-		int count = 0;
-		for(int n : array){
-			if(count == 0){
-				majority = n;
-			}
-			if(n == majority){
-				count++;
-			}
-			else{
-				count--;
-			}
-		}
-		return majority;
-	}
-	
-	public boolean validate(int[] array, int majority){
-		int count = 0;
-		for(int n : array){
-			if(n == majority){
-				count++;
-			}
-		}
-		System.out.println(count + " out of " + array.length);
-		if(count > array.length / 2){
-			return true;
-		}
-		else{
-			return false;
-		}		
-	}
 
 }//end class
