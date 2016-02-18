@@ -18,11 +18,10 @@ public class Task implements Runnable{
 				System.out.println(threadName + " " + derp);
 				--TASKNUM;
 				Thread.sleep(2000L);
-			}
-			
+			}		
 		}
 		catch (InterruptedException iex){}
-		System.out.println("Exiting Thread");
+		System.out.println("Exiting " + threadName);
 	}
 
 }
