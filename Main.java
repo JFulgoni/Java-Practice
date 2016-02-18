@@ -181,6 +181,13 @@ public class Main {
 		s = "racecar";
 		System.out.println("\nIs it a palindrome?: " + ppart.isPalindrome(s));
 		
+		Task t1 = new Task("Thread 1");
+		Task t2 = new Task("Thread 2");
+		Thread thread = new Thread(t1);
+		thread.start();
+		Thread thread2 = new Thread(t2);
+		thread2.start();
+		
 		
 	}//end main
 	
