@@ -5,7 +5,7 @@ public class Stock {
 	public int[] prices;
 	
 	public Stock(){
-		prices = new int[]{2, 5, 7, 4, 8, 2 , 6, 9 , 0};
+		prices = new int[]{2, 5, 7, 4, 8, 2 , 6, 9 , 3};
 	}
 	
 	/*
@@ -74,8 +74,9 @@ public class Stock {
 			maxVal = Math.max(maxVal,  prices[j]);
 		}
 		
-		result = l2r[len - 1];
-		//the best value will be the combination of the two halfs
+		result = l2r[len - 1]; //on the chance it just continually increases all the way
+		
+		//the best value will be the combination of the two halves
 		for(int k = 1; k < len - 1; ++k){
 			result = Math.max(result, l2r[k] + r2l[k + 1]);
 		}
