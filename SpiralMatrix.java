@@ -44,7 +44,7 @@ public class SpiralMatrix {
 	public void printSpiral(){
 		int i;
 		int startRow = 0;
-		int endRow = i;
+		//int endRow = i;
 		int finish = 0;
 		
 	}
