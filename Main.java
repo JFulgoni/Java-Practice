@@ -181,7 +181,7 @@ public class Main {
 		s = "racecar";
 		System.out.println("\nIs it a palindrome?: " + ppart.isPalindrome(s));
 		
-		Task t1 = new Task("Thread 1");
+		Task t1 = new Task();
 		//Task t2 = new Task("Thread 2");
 		Thread thread = new Thread(t1);
 		//Thread thread2 = new Thread(t2);
