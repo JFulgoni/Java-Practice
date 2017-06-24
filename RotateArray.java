@@ -23,8 +23,7 @@ public class RotateArray {
 		}
 		//and then reverse the last spots spot + 1 to len
 		int midpoint = len - ((len - spot) / 2);
-		//System.out.println("midpoint is " + midpoint);
-		
+		//System.out.println("midpoint is " + midpoint);		
 		for(int k = spot + 1; k < midpoint; k++){
 			//System.out.println("k = " + k);
 			//System.out.println(original[k]);

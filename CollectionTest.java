@@ -3,6 +3,7 @@ package john_test;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
+import java.util.Map.Entry;
 import java.util.TreeMap;
 
 public class CollectionTest {
@@ -11,7 +12,7 @@ public class CollectionTest {
 		/*
 		 * HashMap is pretty standard. O(1) get, items are in arbitrary order
 		 */
-		HashMap map1 = new HashMap<Integer, String>();
+		HashMap<Integer, String> map1 = new HashMap<Integer, String>();
 		map1.put(1, "Steve");
 		map1.put(2, "Bill");
 		map1.put(3, "Uri");
@@ -20,20 +21,20 @@ public class CollectionTest {
 		 * LinkedHashMap offers O(1) lookup and Insertion
 		 * It will keep the order that the items were inserted in
 		 */
-		LinkedHashMap map2 = new LinkedHashMap<Integer, String>();
+		LinkedHashMap<Integer, String> map2 = new LinkedHashMap<Integer, String>();
 		map2.put(1, "Steve");
 		map2.put(3, "Uri");
 		map2.put(2, "Bill");
 		/*
 		 * TreeMap is logn Lookup and Insertion, but the values are sorted, and can be iterated through
 		 */
-		TreeMap map3 = new TreeMap<Integer, String>();
+		TreeMap<Integer, String> map3 = new TreeMap<Integer, String>();
 		map3.put(2, "Bill");
 		map3.put(3, "Uri");
 		map3.put(1, "Steve");
 		
-		Iterator iter = map1.entrySet().iterator();
-		iter = map1.values().iterator();
+		Iterator<Entry<Integer, String>> iter = map1.entrySet().iterator();
+		//iter = map1.values().iterator();
 		System.out.println("With HashMap, order is arbitrary");
 		while(iter.hasNext()){
 			System.out.println(iter.next());

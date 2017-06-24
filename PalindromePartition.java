@@ -16,7 +16,7 @@ public class PalindromePartition {
 		for(int i = n - 1; i >=0; --i){
 			for(int j = 1; j < n; ++j){
 				boolean derp = false;
-				if(s.charAt(i)==s.charAt(j)){
+				if(s.charAt(i)==s.charAt(j)){ //check and see if the characters at the positions match
 					if(j< i + 2 || dp[i+1][j-1]){
 						derp = true;
 					}
